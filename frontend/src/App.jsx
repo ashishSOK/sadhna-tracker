@@ -1,22 +1,22 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { ThemeProvider, createTheme, CssBaseline } from '@mui/material';
-import { AuthProvider, useAuth } from './context/AuthContext';
+import { AuthProvider, useAuth } from './context/AuthContext.jsx';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 // Components
-import Navbar from './components/Navbar';
+import Navbar from './components/Navbar.jsx';
 
 // Pages
-import Login from './pages/Login';
-import Signup from './pages/Signup';
-import Dashboard from './pages/Dashboard';
-import SadhnaEntry from './pages/SadhnaEntry';
-import DevoteesList from './pages/DevoteesList';
-import WeeklyWinner from './pages/WeeklyWinner';
-import WhatsAppMessaging from './pages/WhatsAppMessaging';
-import Welcome from './pages/Welcome';
+import Login from './pages/Login.jsx';
+import Signup from './pages/Signup.jsx';
+import Dashboard from './pages/Dashboard.jsx';
+import SadhnaEntry from './pages/SadhnaEntry.jsx';
+import DevoteesList from './pages/DevoteesList.jsx';
+import WeeklyWinner from './pages/WeeklyWinner.jsx';
+import WhatsAppMessaging from './pages/WhatsAppMessaging.jsx';
+import Welcome from './pages/Welcome.jsx';
 
 // Create theme
 const theme = createTheme({
