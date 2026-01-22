@@ -16,6 +16,7 @@ import SadhnaEntry from './pages/SadhnaEntry';
 import DevoteesList from './pages/DevoteesList';
 import WeeklyWinner from './pages/WeeklyWinner';
 import WhatsAppMessaging from './pages/WhatsAppMessaging';
+import Welcome from './pages/Welcome';
 
 // Create theme
 const theme = createTheme({
@@ -139,8 +140,18 @@ function AppRoutes() {
                 />
 
                 {/* Default Route */}
-                <Route path="/" element={<Navigate to="/dashboard" />} />
-                <Route path="*" element={<Navigate to="/dashboard" />} />
+                {/* Welcome Page - shows to unauthenticated users, redirects logged-in users to dashboard */}
+                <Route
+                    path="/"
+                    element={
+                        <PublicRoute>
+                            <Welcome />
+                        </PublicRoute>
+                    }
+                />
+
+                {/* Catch-all: redirect to home page */}
+                <Route path="*" element={<Navigate to="/" />} />
             </Routes>
         </>
     );
